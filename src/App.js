@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Profil from './profil/Profil.js'
+import Mehdi from './Medii.jpg'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+  function handleName(x){
+  alert(x)
+}
+  const Fullname = "Mehdi Zayani";
+  const Bio = "Heyy u i love u";
+  const Profession ="student";
+
+return(
+  <Profil fullname={Fullname} bio={Bio} profession={Profession} handleName={handleName}>
+    <img src={Mehdi} width= '600px' />
+    </Profil>
+   
+  )
 }
 
 export default App;
